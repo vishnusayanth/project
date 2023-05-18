@@ -221,7 +221,7 @@ export default function Home() {
                                                                                         class="text-decoration-none text-success">here.</a>
                                 </p>
                                 <div class="row">
-                                    <div class="col-sm"><img src="{% static 'technology/django.png' %}"
+                                    {/* <div class="col-sm"><img src="{% static 'technology/django.png' %}"
                                                              class="img-fluid"/></div>
                                     <div class="col-sm"><img src="{% static 'technology/ajax.png' %}"
                                                              class="img-fluid"/></div>
@@ -232,11 +232,11 @@ export default function Home() {
                                     <div class="col-sm"><img src="{% static 'technology/news.png' %}"
                                                              class="img-fluid"/></div>
                                     <div class="col-sm"><img src="{% static 'technology/html.png' %}"
-                                                             class="img-fluid"/></div>
+                                                             class="img-fluid"/></div> */}
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm"><img src="{% static 'technology/python.png' %}"
+                                    {/* <div class="col-sm"><img src="{% static 'technology/python.png' %}"
                                                              class="img-fluid"/></div>
                                     <div class="col-sm"><img src="{% static 'technology/heroku.png' %}"
                                                              class="img-fluid"/></div>
@@ -249,7 +249,7 @@ export default function Home() {
                                     <div class="col-sm"><img src="{% static 'technology/bootstrap.png' %}"
                                                              class="img-fluid"/></div>
                                     <div class="col-sm"><img src="{% static 'technology/postgres.png' %}"
-                                                             class="img-fluid"/></div>
+                                                             class="img-fluid"/></div> */}
                                 </div>
                             </div>
                         </div>
