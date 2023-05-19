@@ -34,7 +34,7 @@ export default function Home() {
                                             <hr />
                                         </center>
                                         <div className="text-justify">This django server built by Vishnu Sayanth provides API which includes
-                                            fetching lists of Countries,Continents,States etc in the form of json response. Only Get requests are
+                                            fetching lists of Countries,States etc in the form of json response. Only Get requests are
                                             accepted by this API.
                                             This is a public API, hence no authorization is required when sending the requests from your localhost.
 
@@ -47,15 +47,6 @@ export default function Home() {
                                                 </li>
                                             </ul>
                                         </div>
-                                        <strong>Get the list of all continents &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <span style={{ "cursor": "pointer" }}
-                                                className="badge bg-primary popover-btn" data-bs-trigger="focus"
-                                                data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"
-                                                data-bs-content=' {"continents": [{"id": 22,"name": "Asia"},{"id": 23,"name": "Africa"},]} '>
-                                                Sample response
-                                            </span>
-                                        </strong>
-                                        <p><var>https://server.vishnusayanth.com/vishnusayanth/hobby/api/continents/</var></p>
                                         <strong>
                                             Get the list of all countries &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <span style={{ "cursor": "pointer" }}
