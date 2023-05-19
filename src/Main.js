@@ -1,14 +1,13 @@
 import React from "react";
 import Home from "./main/Home";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./main/Error";
-import Dog from "./components/Dog";
 import Geography from "./main/Geography";
 import Movie from "./main/Movie";
 import Nasa from "./main/Nasa";
 
 function Main() {
-    let [pageTitle, setPageTitle] = React.useState('Dashboard');
+    let [pageTitle, setPageTitle] = React.useState('');
     return (
         <React.Fragment>
             <aside id="sidebar" className="sidebar">
@@ -16,6 +15,14 @@ function Main() {
 
 
                     <li className="nav-heading">Pages</li>
+
+                    <li className="nav-item">
+                        <a className="nav-link collapsed" href="\home">
+                            <i className="bi bi-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
 
                     <li className="nav-item">
                         <a className="nav-link collapsed" href="\nasa">
@@ -41,6 +48,9 @@ function Main() {
                     </li>
 
 
+                   
+
+
                 </ul>
             </aside>
             <main id="main" className="main">
@@ -54,12 +64,13 @@ function Main() {
 
                                 <BrowserRouter>
                                     <Routes>
-                                        <Route exact path="/" element={<Home setPageTitle={setPageTitle}/>}/>
-                                        <Route exact path="nasa" element={<Nasa setPageTitle={setPageTitle}/>}/>
+                                        <Route exact path="/" element={<Home setPageTitle={setPageTitle} />} />
+                                        <Route exact path="/home" element={<Home setPageTitle={setPageTitle} />} />
+                                        <Route exact path="nasa" element={<Nasa setPageTitle={setPageTitle} />} />
                                         <Route exact path="geography"
-                                               element={<Geography setPageTitle={setPageTitle}/>}/>
-                                        <Route exact path="movie" element={<Movie setPageTitle={setPageTitle}/>}/>
-                                        <Route exact path="error" element={<Error setPageTitle={setPageTitle}/>}/>
+                                            element={<Geography setPageTitle={setPageTitle} />} />
+                                        <Route exact path="movie" element={<Movie setPageTitle={setPageTitle} />} />
+                                        <Route exact path="error" element={<Error setPageTitle={setPageTitle} />} />
                                     </Routes>
                                 </BrowserRouter>
                             </div>
@@ -68,11 +79,6 @@ function Main() {
                 </section>
             </main>
 
-            <div className="modal fade" id="verticalycentered" tabIndex="-1">
-                <div className="modal-dialog modal-dialog-centered">
-                            <Dog/>
-                </div>
-            </div>
         </React.Fragment>
     );
 }

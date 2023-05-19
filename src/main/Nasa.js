@@ -95,6 +95,7 @@ export default function Nasa(props) {
                         </div>
                         <div className="modal fade" id="rover" tabIndex="-1">
                             <div className="modal-dialog modal-dialog-centered">
+                                
                                 {roverPics && <div className="modal-content">
                                     <div className="modal-header">
                                         <h6 className="modal-title">Mars Snapshots</h6>&nbsp;&nbsp;&nbsp;&nbsp;

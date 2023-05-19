@@ -1,267 +1,229 @@
-import Table from "../components/Table";
 import React from "react";
 
 export default function Home() {
     return <section id="hero" className="d-flex align-items-center">
         <div className="container-fluid" data-aos="fade-up">
+
             <div className="row justify-content-center">
-            <div class="container-fluid" style="width: 90%;">
-            <nav class="nav nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
-                <a class="flex-sm-fill text-sm-center nav-link active btn-outline-primary" id="api-tab"
-                   data-toggle="tab" href="#api"
-                   role="tab" aria-controls="api" style="color: black;"
-                   aria-selected="true">Locations API</a>
+                <div className="container-fluid" style={{ "width": "90%" }}>
+                    <nav className="nav nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
+                        <a className="flex-sm-fill text-sm-center nav-link btn-outline-primary" id="api-tab"
+                            data-bs-toggle="tab" href="#api"
+                            role="tab" aria-controls="api"
+                            aria-selected="true">Locations API</a>
 
-                <a class="flex-sm-fill text-sm-center nav-link btn-outline-primary" id="features-tab" data-toggle="tab"
-                   href="#features" style="color: black;"
-                   role="tab" aria-controls="features"
-                   aria-selected="false">Features</a>
+                        <a className="flex-sm-fill text-sm-center nav-link active btn-outline-primary" id="features-tab" data-bs-toggle="tab"
+                            href="#features"
+                            role="tab" aria-controls="features"
+                            aria-selected="false">Features</a>
 
-                <a class="flex-sm-fill text-sm-center nav-link btn-outline-primary" id="technologies-tab"
-                   data-toggle="tab"
-                   href="#technologies" style="color: black;"
-                   role="tab" aria-controls="technologies"
-                   aria-selected="false">Technology</a>
-            </nav>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="api" role="tabpanel" aria-labelledby="api-tab">
-                    <section class="features">
-                        <div class="container">
-                            <div class="section-heading">
-                                <center>
-                                    <h2>Locations API</h2>
-                                    <p class="text-muted">Brief guide on how to use the API.</p>
-                                    <hr/>
-                                </center>
-                                <p class="text-justify">This application provides API which includes fetching lists of
-                                    Countries,Continents,States etc in the form of json response. Only Get requests are
-                                    accepted by this API.
-                                    To use the API, you must be authenticated using the token provided at the dashboard.
-                                <ol>
-                                    <li>Sign up using Github, Linkedin or Registration form provided at the footer of
-                                        every page.
-                                    </li>
-                                    <li><strong>Login</strong> to the application and click on <strong>User
-                                        icon</strong> link on the
-                                        navbar.
-                                    </li>
-                                    <li>Click on <strong>Get Token</strong> option to generate your API token.</li>
-                                    <li>Copy the token from the alert popped up and use it to access the API.</li>
-                                    <li>In few mobile browsers, this alert does not pop up. In that case, use a PC.</li>
-                                    <li>Below given are url examples for each response provided by the API.</li>
-                                </ol>
-                                <ul>
-                                    <li>Please note :</li>
-                                    <li>The response is in json format</li>
-                                    <li>Your API token must be provided in the Header of the GET request.</li>
-                                    <li>Id mentioned in the sample urls must be replaced by the object's ID
-                                        which is provided by the application.
-                                    </li>
-                                    <li>Any method other than GET such as POST,PUT & DELETE etc. is not allowed.
-                                    </li>
-                                </ul>
-                                </p>
-                                <strong>Get the list of all continents
-                                    <span style="cursor: pointer" data-trigger="hover"
-                                          class="badge badge-secondary popover-btn"
-                                          data-container="body" data-title="Continents"
-                                          data-toggle="popover" data-placement="bottom"
-                                          data-content=' {"continents": [{"id": 22,"name": "Asia"},{"id": 23,"name": "Africa"},]} '>
-                                        Sample response
-                                    </span>
-                                </strong>
-                                <p><var>https://server.vishnusayanth.com/vishnusayanth/hobby/api/continents/</var></p>
-                                <strong>
-                                    Get the list of all countries
-                                    <span style="cursor: pointer"
-                                          class="badge badge-secondary popover-btn" data-trigger="hover"
-                                          data-container="body" data-title="Countries"
-                                          data-toggle="popover" data-placement="bottom"
-                                          data-content=' {"countries": [{"id": 403,"name": "Afghanistan","official_language": "Pashto","country_code": 93,"iso_code": "AF / AFG","continent_name": "Asia","capital": "Kabul"},"id": 404,"name":"Albania","official_language": "Albanian","country_code": 355,"iso_code": "AL / ALB","continent_name": "Europe","capital": "Tirana District"},]} '>
-                                        Sample response
-                                    </span>
-                                </strong>
-                                <p><var>https://server.vishnusayanth.com/vishnusayanth/hobby/api/countries/</var></p>
-                                <strong>
-                                    Get the list of states in country with id <strong>1</strong>
-                                    <span style="cursor: pointer"
-                                          class="badge badge-secondary popover-btn" data-trigger="hover"
-                                          data-container="body" data-title="States"
-                                          data-toggle="popover" data-placement="bottom"
-                                          data-content=' {"country": "Afghanistan","states": [{"name": "Badakhshan"},{"name": "Badghis"},{"name": "Baghlan"},]} '>
-                                        Sample response
-                                    </span>
-                                </strong>
-                                <p><var>https://server.vishnusayanth.com/vishnusayanth/hobby/api/states/1</var></p>
-                                <strong>
-                                    Get the list of countries in continent with id <strong>1</strong>
-                                    <span style="cursor: pointer"
-                                          class="badge badge-secondary popover-btn" data-trigger="hover"
-                                          data-container="body" data-title="Countries in Continent"
-                                          data-toggle="popover" data-placement="bottom"
-                                          data-content=' {"continent": "Asia","countries": [{"name": "Afghanistan"},{"name": "Armenia"},{"name": "Bahamas"},{"name": "Bahrain"},]} '>
-                                        Sample response
-                                    </span>
-                                </strong>
-                                
-                                <section class="faq" style="width: 100%;">
-                                    <div data-aos="fade-up">
-                                        <div class="faq-list">
+                        <a className="flex-sm-fill text-sm-center nav-link btn-outline-primary" id="technologies-tab"
+                            data-bs-toggle="tab"
+                            href="#technologies"
+                            role="tab" aria-controls="technologies"
+                            aria-selected="false">Technology</a>
+                    </nav>
+                    <div className="tab-content" id="myTabContent">
+                        <div className="tab-pane fade" id="api" role="tabpanel" aria-labelledby="api-tab">
+                            <section className="features">
+                                <div className="container">
+                                    <div className="section-heading">
+                                        <center>
+                                            <br />
+                                            <p className="text-muted">Brief guide on how to use the API.</p>
+                                            <hr />
+                                        </center>
+                                        <div className="text-justify">This django server built by Vishnu Sayanth provides API which includes
+                                            fetching lists of Countries,Continents,States etc in the form of json response. Only Get requests are
+                                            accepted by this API.
+                                            This is a public API, hence no authorization is required when sending the requests from your localhost.
+
                                             <ul>
-                                                <li data-aos="fade-up" data-aos-delay="100">
-                                                    <i class="bx bx-help-circle icon-help"></i> <a
-                                                        data-toggle="collapse" class="collapse" title="Click to expand"
-                                                        href="#faq-list-1">Here is an example of how to use this API to
-                                                    get a list of continents using
-                                                    Python script.<i class="bx bx-chevron-down icon-show"></i><i
-                                                            class="bx bx-chevron-up icon-close"></i></a>
-                                                    <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
-                                                        
-                                                        <div class="shadow-lg p-3 mb-5 bg-light rounded code">
-                                                            <code>{`import requests
-                                                            url = 'https://server.vishnusayanth.com/vishnusayanth/hobby/api/continents/'
-                                                            headers = {'Authorization':'Token &lt;your_api_token_here&gt;'}
-                                                            response =
-                                                                requests.get(url=url,headers=headers)
-                                                            jsonData = response.json()
-                                                                # Play around with jsonData`}
-                                                                </code>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li data-aos="fade-up" data-aos-delay="200">
-                                                    <i class="bx bx-help-circle icon-help"></i> <a
-                                                        data-toggle="collapse" href="#faq-list-2"
-                                                        title="Click to expand"
-                                                        class="collapsed">How to use this API to fill a 'countires' HTML
-                                                    select element using jQuery & a
-                                                    simple AJAX call.<i class="bx bx-chevron-down icon-show"></i><i
-                                                            class="bx bx-chevron-up icon-close"></i></a>
-                                                    <div id="faq-list-2" class="collapse" data-parent=".faq-list">
-                                                        <div class="shadow-lg p-3 mb-5 bg-light rounded code">
-                                                           
-                                                        </div>
-                                                    </div>
+                                                <li>Please note :</li>
+                                                <li>The response is in json format</li>
+                                                <li>No authorization or client id is required in the Header of the GET request.</li>
+                                                <li>Id mentioned in the sample urls must be replaced by the object's ID which is provided by the application.</li>
+                                                <li>Any method other than GET such as POST,PUT & DELETE etc. is not allowed.
                                                 </li>
                                             </ul>
                                         </div>
+                                        <strong>Get the list of all continents &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span style={{ "cursor": "pointer" }}
+                                                className="badge bg-primary popover-btn" data-bs-trigger="focus"
+                                                data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"
+                                                data-bs-content=' {"continents": [{"id": 22,"name": "Asia"},{"id": 23,"name": "Africa"},]} '>
+                                                Sample response
+                                            </span>
+                                        </strong>
+                                        <p><var>https://server.vishnusayanth.com/vishnusayanth/hobby/api/continents/</var></p>
+                                        <strong>
+                                            Get the list of all countries &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span style={{ "cursor": "pointer" }}
+                                                className="badge bg-primary popover-btn" data-bs-trigger="focus"
+                                                data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"
+                                                data-bs-content=' {"countries": [{"id": 403,"name": "Afghanistan","official_language": "Pashto","country_code": 93,"iso_code": "AF / AFG","continent_name": "Asia","capital": "Kabul"},"id": 404,"name":"Albania","official_language": "Albanian","country_code": 355,"iso_code": "AL / ALB","continent_name": "Europe","capital": "Tirana District"},]} '>
+                                                Sample response
+                                            </span>
+                                        </strong>
+                                        <p><var>https://server.vishnusayanth.com/vishnusayanth/hobby/api/countries/</var></p>
+                                        <strong>
+                                            Get the list of states in country with id <strong>1</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <span style={{ "cursor": "pointer" }}
+                                                className="badge bg-primary popover-btn" data-bs-trigger="focus"
+                                                data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"
+                                                data-bs-content=' {"country": "Afghanistan","states": [{"name": "Badakhshan"},{"name": "Badghis"},{"name": "Baghlan"},]} '>
+                                                Sample response
+                                            </span>
+                                        </strong>
+                                        <p><var>https://server.vishnusayanth.com/vishnusayanth/hobby/api/states/1</var></p>
 
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
-                    <section class="features">
-                        <div class="container">
-                            <div class="section-heading text-center">
-                                <h2>Features</h2>
-                                <p class="text-muted">Check out what's possible on this application.</p>
-                                <hr/>
-                                <p class="text-justify">This is a hobby project developed by Vishnu Sayanth, deployed on
-                                    Heroku platform. This application has a public API that can be used to get
-                                    data on
-                                    geographic locations like countries,continents & states etc.
-                                    Below given are the things possible on this applciation.
-                                </p>
-                                <br/>
-                                <div class="shadow-lg p-3 mb-5 bg-light rounded">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            REST API to get json response of requested data related to geographic
-                                            locations.
-                                        </a>
-                                        <a href="#"
-                                           class="list-group-item list-group-item-action list-group-item-secondary">
-                                            Use Linkedin & GitHub accounts to signup/login to this application.
-                                        </a>
-                                        <a href="#"
-                                           class="list-group-item list-group-item-action">
-                                            View data in form of tables (ie; rows & columns).
-                                        </a>
-                                        <a href="#"
-                                           class="list-group-item list-group-item-action list-group-item-secondary">
-                                            Browse categories/playlists, search for tracks/artists & Play music on a
-                                            clonned Spotify player.
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action">
-                                            Read/Filter news headlines from India, scraped from Google news.
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="tab-pane fade" id="technologies" role="tabpanel" aria-labelledby="technologies-tab">
-                    <section class="features">
-                        <div class="container">
-                            <div class="section-heading text-center justify-content-around">
-                                <h2>Technology</h2>
-                                <p class="text-muted">Technologies & Tools used to build this app.</p>
-                                <hr/>
-                                <p class="text-justify">This application is built using the <strong>Python</strong>
-                                    framework, <strong>Django</strong>.
-                                    The front end is developed using <strong>HTML5, CSS3 & Javascript</strong> and
-                                    <strong>Python </strong> is used as the backend, obviously.
-                                    <strong>Jquery & AJAX</strong> are used for asynchronous tasks
-                                    such as sending emails and other stuff.
-                                    The CSS framework <strong>Bootstrap</strong>
-                                    is used to style the front end of the application.
-                                    Locations API is developed using <strong>Django REST framework</strong>
-                                    which accesses data in a <strong>PostgreSQL</strong> database.
-                                    API provided by <strong>Spotify</strong> & data scraped off of
-                                    <strong>Google News</strong> is also utilised in this application.
-                                    <br/>
-                                    The application is versioned and deployed using the continuous deployment provided
-                                    by <strong>Heroku & GitHub</strong>.
-                                    The source code of this application can be found <a target="_blank"
-                                                                                        href="https://www.github.com/vishnusayanth/django-app"
-                                                                                        class="text-decoration-none text-success">here.</a>
-                                </p>
-                                <div class="row">
-                                    {/* <div class="col-sm"><img src="{% static 'technology/django.png' %}"
-                                                             class="img-fluid"/></div>
-                                    <div class="col-sm"><img src="{% static 'technology/ajax.png' %}"
-                                                             class="img-fluid"/></div>
-                                    <div class="col-sm"><img src="{% static 'technology/git.png' %}" class="img-fluid"/>
-                                    </div>
-                                    <div class="col-sm"><img src="{% static 'technology/rest.png' %}"
-                                                             class="img-fluid"/></div>
-                                    <div class="col-sm"><img src="{% static 'technology/news.png' %}"
-                                                             class="img-fluid"/></div>
-                                    <div class="col-sm"><img src="{% static 'technology/html.png' %}"
-                                                             class="img-fluid"/></div> */}
+                                        <br />
+                                        <br />
+                                        <section className="faq" style={{ "width": "100%" }}>
+                                            <div data-aos="fade-up">
+                                                <div className="faq-list">
+                                                    <ul>
+                                                        <li data-aos="fade-up" data-aos-delay="100">
+                                                            <a data-bs-toggle="collapse" className="alert alert-light rounded collapsed" title="Click to expand"
+                                                                href="#faq-list-1">Python example to use countries API
+                                                                <i className="bx bx-chevron-down icon-show"></i>
+                                                                <i className="bx bx-chevron-up icon-close"></i>
+                                                            </a>
+                                                            <div id="faq-list-1" className="collapse" data-parent=".faq-list">
+                                                                <div className="shadow-lg p-3 mb-5 bg-light rounded code">
+                                                                    <code>{`import requests
+url = 'https://server.vishnusayanth.com/vishnusayanth/hobby/api/continents/'\n
+headers = {'Authorization':'Token &lt;your_api_token_here&gt;'}\n
+response = requests.get(url=url,headers=headers)\n
+jsonData = response.json()\n
+# Play around with jsonData`}
+                                                                    </code>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li data-aos="fade-up" data-aos-delay="200">
+                                                            <a data-bs-toggle="collapse" href="#faq-list-2"
+                                                                title="Click to expand"
+                                                                className="collapsed alert alert-light rounded ">Ajax example to use the countries API
+                                                                <i className="bx bx-chevron-down icon-show"></i>
+                                                                <i className="bx bx-chevron-up icon-close"></i>
+                                                            </a>
+                                                            <div id="faq-list-2" className="collapse" data-parent=".faq-list">
+                                                                <div className="shadow-lg p-3 mb-5 bg-light rounded code">
+                                                                    <code>
+                                                                        {`<script>
+        $(document).ready(function () {
+            let url = 'https://server.vishnusayanth.com/vishnusayanth/hobby/api/countries/';
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                headers: {},
+                url: url,
+                success: function (data) {
+                    $.each(data.countries, function (i, item) {
+                        let opt_string = '<option value=item.name>item.name<option>';
+                        $('#mySelect').append(opt_string);
+                    })
+                }
+            })
+        });
+    </script>
+    <select id="mySelect">
+        <option value="">Select Country</option>
+    </select>`}
+                                                                    </code>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
-                                </div>
-                                <div class="row">
-                                    {/* <div class="col-sm"><img src="{% static 'technology/python.png' %}"
-                                                             class="img-fluid"/></div>
-                                    <div class="col-sm"><img src="{% static 'technology/heroku.png' %}"
-                                                             class="img-fluid"/></div>
-                                    <div class="col-sm"><img src="{% static 'technology/spotify.png' %}"
-                                                             class="img-fluid"/></div>
-                                    <div class="col-sm"><img src="{% static 'technology/css.png' %}" class="img-fluid"/>
+                                            </div>
+                                        </section>
                                     </div>
-                                    <div class="col-sm"><img src="{% static 'technology/js.png' %}" class="img-fluid"/>
-                                    </div>
-                                    <div class="col-sm"><img src="{% static 'technology/bootstrap.png' %}"
-                                                             class="img-fluid"/></div>
-                                    <div class="col-sm"><img src="{% static 'technology/postgres.png' %}"
-                                                             class="img-fluid"/></div> */}
                                 </div>
-                            </div>
+                            </section>
                         </div>
-                    </section>
+                        <div className="tab-pane show active" id="features" role="tabpanel" aria-labelledby="features-tab">
+                            <section className="features">
+                                <div className="container">
+                                    <div className="section-heading text-center">
+                                        <br />
+                                        <p className="text-muted">Check out what's possible on this application.</p>
+                                        <hr />
+                                        <p className="text-justify">This is a hobby project developed by Vishnu Sayanth, deployed on
+                                            Google Cloud platform. Below given are the features developed in this applciation.
+                                        </p>
+                                        <br />
+                                        <div className="shadow-lg p-3 mb-5 bg-light rounded">
+                                            <div className="list-group">
+                                                <a href="#" className="list-group-item list-group-item-action">
+                                                    REST API to get json response of requested data related to geographic
+                                                    locations.
+                                                </a>
+                                                <a href="#"
+                                                    className="list-group-item list-group-item-action list-group-item-secondary">
+                                                    Interface to search for movies and series built using the API provided by <a target="_blank" href="https://www.omdbapi.com/"> OMDB</a>.
+                                                </a>
+                                                <a href="#"
+                                                    className="list-group-item list-group-item-action">
+                                                    View data from the locations API built by Vishnu Sayanth in form of a table (ie; rows & columns).
+                                                </a>
+                                                <a href="#"
+                                                    className="list-group-item list-group-item-action">
+                                                    The flag thumbnails are fetched from <a href="https://flagcdn.com" target="_blank"><strong>HERE</strong></a>.
+                                                </a>
+                                                <a href="#"
+                                                    className="list-group-item list-group-item-action list-group-item-secondary">
+                                                    Browse snapshots taken by the Mars rover "curiosity" and view the Picture of the day, built using API provided by <a target="_blank" href="https://api.nasa.gov/"> Nasa</a>.
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div className="tab-pane fade" id="technologies" role="tabpanel" aria-labelledby="technologies-tab">
+                            <section className="features">
+                                <div className="container">
+                                    <div className="section-heading text-center justify-content-around">
+                                        <br />
+                                        <p className="text-muted">Technologies & Tools used to build this app.</p>
+                                        <hr />
+                                        <p className="text-justify">This application is built using the <strong>Javascript</strong>
+                                            framework, <strong>React JS</strong>(HTML,CSS,Javascript and JQuery).
+                                            The backend end is developed using <strong>Python</strong> framework
+                                            <strong>Django </strong>.
+
+                                            The CSS framework <strong>Bootstrap</strong>
+                                            is used to style the front end of the application.
+                                            Locations API is developed using <strong>Django REST framework</strong>
+                                            which accesses data in a <strong>MySQL</strong> database.
+                                            The application is versioned using GitHub and deployed using the cloud SDK provided
+                                            by <strong>Google Cloud</strong>.
+                                        </p>
+                                       <br/>
+                                        <div className="row d-flex align-items-center justify-content-center">
+                                            <div className="row container">
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/python.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/django.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/mysql.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/gcloud.png" className="img-fluid" /></div>
+                                                <div className="col-sm-2"></div>
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/react.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/js.png" className="img-fluid" />                                            </div>
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/htmlcss.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/bootstrap.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/jquery.png" className="img-fluid" /></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-                
-                {/* // <div className="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-                //     <img src="https://server.vishnusayanth.com/static/assets/img/hero-img.png"
-                //          className="img-fluid animated" alt=""/>
-                // </div> */}
             </div>
         </div>
 
