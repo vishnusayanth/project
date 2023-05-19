@@ -90,14 +90,14 @@ export default function Home() {
                                                                 <i className="bx bx-chevron-up icon-close"></i>
                                                             </a>
                                                             <div id="faq-list-1" className="collapse" data-parent=".faq-list">
-                                                                <div className="shadow-lg p-3 mb-5 bg-light rounded code">
-                                                                    <code>{`import requests
-url = 'https://server.vishnusayanth.com/vishnusayanth/hobby/api/continents/'\n
-headers = {'Authorization':'Token &lt;your_api_token_here&gt;'}\n
-response = requests.get(url=url,headers=headers)\n
-jsonData = response.json()\n
-# Play around with jsonData`}
-                                                                    </code>
+                                                                <div className="p-3 mb-5 bg-light rounded code">
+                                                                    <pre>
+                                                                        <code>{`import requests`}</code><br />
+                                                                        <code>{`url = <above sample url>`}</code><br />
+                                                                        <code>{`response = requests.get(url=url)`}</code><br />
+                                                                        <code>{`jsonData = response.json()`}</code><br />
+                                                                        <code>{`# Play around with jsonData`}</code><br />
+                                                                    </pre>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -109,29 +109,30 @@ jsonData = response.json()\n
                                                                 <i className="bx bx-chevron-up icon-close"></i>
                                                             </a>
                                                             <div id="faq-list-2" className="collapse" data-parent=".faq-list">
-                                                                <div className="shadow-lg p-3 mb-5 bg-light rounded code">
-                                                                    <code>
-                                                                        {`<script>
-        $(document).ready(function () {
-            let url = 'https://server.vishnusayanth.com/vishnusayanth/hobby/api/countries/';
-            $.ajax({
-                type: "GET",
-                dataType: "json",
-                headers: {},
-                url: url,
-                success: function (data) {
-                    $.each(data.countries, function (i, item) {
-                        let opt_string = '<option value=item.name>item.name<option>';
-                        $('#mySelect').append(opt_string);
-                    })
-                }
-            })
-        });
-    </script>
-    <select id="mySelect">
-        <option value="">Select Country</option>
-    </select>`}
-                                                                    </code>
+                                                                <div className="p-3 mb-5 bg-light rounded code">
+                                                                    <pre>
+                                                                        <code>{`<script>`}</code><br />
+                                                                        <code>&emsp;{`$(document).ready(function () {`}</code><br />
+                                                                        <code>&emsp;&emsp;{`let url = <above sample url>;`}</code><br />
+                                                                        <code>&emsp;&emsp;{`$.ajax({`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;{`type: "GET",`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;{`dataType: "json",`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;{`headers: {},`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;{`url: url,`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;{`success: function (data) {`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;&emsp;{`$.each(data.countries, function (i, item) {`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;&emsp;{`let opt_string = '<option value=item.name>item.name<option>';`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;&emsp;{`$('#mySelect').append(opt_string);`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;&emsp;{`})`}</code><br />
+                                                                        <code>&emsp;&emsp;&emsp;{`}`}</code><br />
+                                                                        <code>&emsp;&emsp;{`})`}</code><br />
+                                                                        <code>&emsp;{`});`}</code><br />
+                                                                        <code>{`</script>`}</code><br />
+                                                                        <code>{`<select id="mySelect">`}</code><br />
+                                                                        <code>&emsp;{`<option value="">Select Country</option>`}</code><br />
+                                                                        <code>{`</select>`}
+                                                                        </code>
+                                                                    </pre>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -202,7 +203,7 @@ jsonData = response.json()\n
                                             The application is versioned using GitHub and deployed using the cloud SDK provided
                                             by <strong>Google Cloud</strong>.
                                         </p>
-                                       <br/>
+                                        <br />
                                         <div className="row d-flex align-items-center justify-content-center">
                                             <div className="row container">
                                                 <div className="col-sm"><img src="https://career.vishnusayanth.com/assets/img/skills/python.png" className="img-fluid" /></div>
