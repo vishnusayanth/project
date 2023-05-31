@@ -10,7 +10,7 @@ export default function Geography(props) {
     const [selectedCountry, setSelectedCountry] = React.useState(null);
     const [flag, setFlag] = React.useState('');
     const [flagSrcSet, setFlagSrcSet] = React.useState('');
-    let baseUrl = 'https://server.vishnusayanth.com/vishnusayanth/hobby/api';
+    let baseUrl = 'https://server.elvesonthecloud.com/vishnusayanth/hobby/api';
     let [states, setStates] = React.useState([]);
     let searchCountry = (searchText) => {
         let table = document.getElementById("countries");
