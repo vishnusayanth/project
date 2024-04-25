@@ -3,6 +3,7 @@ import React from "react";
 
 export default function Geography(props) {
     // crossorigin="anonymous"
+    const token = process.env.REACT_APP_AUTH_TOKEN;
     let [spinner, setSpinner] = React.useState(true);
     let [secondSpinner, setSecondSpinner] = React.useState(false);
     let [tableBody, setTableBody] = React.useState([]);
@@ -10,7 +11,7 @@ export default function Geography(props) {
     const [selectedCountry, setSelectedCountry] = React.useState(null);
     const [flag, setFlag] = React.useState('');
     const [flagSrcSet, setFlagSrcSet] = React.useState('');
-    let baseUrl = 'https://server.elvesonthecloud.com/vishnusayanth/hobby/api';
+    let baseUrl = 'https://django-vishnusayanth.koyeb.app/api';
     let [states, setStates] = React.useState([]);
     let searchCountry = (searchText) => {
         let table = document.getElementById("countries");
@@ -38,16 +39,17 @@ export default function Geography(props) {
         }
     }
     let setCountry = country => {
-        let tempIso = country.iso_code.split('/')[0].replace(' ', '').toLowerCase();
+        let tempIso = country.iso_code.split('/')[0].replace(' ', '').toUpperCase();
         setSelectedCountry(country);
         setStates([]);
-        setFlag(`https://flagcdn.com/w20/${tempIso}.png`);
-        setFlagSrcSet(`https://flagcdn.com/w40/${tempIso}.png 2x"`);
+        setFlag(`https://flagsapi.com/${tempIso}/shiny/64.png`);
+        setFlagSrcSet(`https://flagsapi.com/${tempIso}/shiny/64.png`);
         setSecondSpinner(true)
         fetch(`${baseUrl}/states/${country.id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Token ${token}`
             },
         }).then(res => res.json()).then(res => setStates(res.states)).finally(() => setSecondSpinner(false));
     }
@@ -56,6 +58,7 @@ export default function Geography(props) {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Token ${token}`
             },
         }).then(res => res.json()).then(res => {
             setTableBody(res.countries);
@@ -107,8 +110,8 @@ export default function Geography(props) {
                             {states.length > 0 && <div className="card-body">
                                 <br />
                                 <center>
-                                    <img src={flag} srcSet={flagSrcSet} className="card-img-top rounded shadow-lg" alt="flag"
-                                        style={{ 'height': 100, 'width': 180 }} />
+                                    <img src={flag} srcSet={flagSrcSet} className="card-img-top" alt="flag"
+                                        style={{ 'height': 130, 'width': 150 }} />
                                 </center>
                                 <br />
                                 <div className="card-body">
