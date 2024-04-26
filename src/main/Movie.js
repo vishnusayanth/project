@@ -9,7 +9,7 @@ export default function Movie(props) {
     let [typeOfMedia, setTypeOfMedia] = React.useState('movie');
     let tableHead = ['Title', 'Type', 'Year'];
     let [tableBody, setTableBody] = React.useState([]);
-    const API_KEY = '1a5d9d22';
+    const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
     let setMovie = movie => {
         setSecondSpinner(true);
         fetch('https://www.omdbapi.com/?i=' + movie.imdbID + '&apikey=' + API_KEY, {

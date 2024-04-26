@@ -4,7 +4,7 @@ export default function Nasa(props) {
     let [roverPics, setRoverPics] = React.useState([]);
     let [epicPics, setEpicPics] = React.useState([]);
     let [epicUrl, setEpicUrlState] = React.useState([]);
-    const API_KEY = '71pbVoQmLC0Sq48EumwHmT2aiNTu1AxFmQkWR3Wn';
+    const API_KEY = process.env.REACT_APP_NASA_API_KEY;
     let [picOfDay, setPicOfDay] = React.useState({});
     let setEpicUrl = () => {
         let item = epicPics[Math.floor(Math.random() * 10)];
