@@ -46,15 +46,35 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script>
-        if ("geolocation" in navigator) {navigator.geolocation.getCurrentPosition(function (position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-            fetch('https://django-vishnusayanth.koyeb.app/visit/', {method: 'POST',body: JSON.stringify({ latitude, longitude })})});
+        const cookieName = "siteVisitCookieVishnu";
+        function setSiteVisitCookie() {
+            var date = new Date();
+            date.setTime(date.getTime() + (2 * 60 * 60 * 1000));
+            document.cookie = cookieName + "=1" + "; expires=" + date.toUTCString() + "; path=/";
+        }
+        var cookies = document.cookie.split(';');
+        var cookieExists = false;
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.indexOf(cookieName) === 0) {
+                cookieExists = true;
+                break;
+            }
+        }
+        if (!cookieExists) {
+            setSiteVisitCookie();
+        }
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                fetch('https://django-vishnusayanth.koyeb.app/visit/', { method: 'POST', body: JSON.stringify({ latitude, longitude }) })
+            });
         }
         else {
             fetch('https://django-vishnusayanth.koyeb.app/visit/', { method: 'POST' });
         }
-      </script>
+    </script>
     <script>
         $(document).ready(function () {
             $('[title]').tooltip();
@@ -88,8 +108,8 @@
                 <img src="https://django-vishnusayanth.koyeb.app/static/assets/img/favicon.ico" alt="">
                 <span class="d-none d-lg-block">REACT APP</span>
             </a>
-            
-            
+
+
         </div><!-- End Logo -->
 
 
