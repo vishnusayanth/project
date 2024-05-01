@@ -49,10 +49,10 @@
         if ("geolocation" in navigator) {navigator.geolocation.getCurrentPosition(function (position) {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
-            fetch('https://server.elvesonthecloud.com/api/admin/visit/', {method: 'POST',body: JSON.stringify({ latitude, longitude })})});
+            fetch('https://django-vishnusayanth.koyeb.app/visit/', {method: 'POST',body: JSON.stringify({ latitude, longitude })})});
         }
         else {
-            fetch('https://server.elvesonthecloud.com/api/admin/visit/', { method: 'POST' });
+            fetch('https://django-vishnusayanth.koyeb.app/visit/', { method: 'POST' });
         }
       </script>
     <script>
