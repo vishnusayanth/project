@@ -8,7 +8,7 @@
     <title>React | Vishnu Sayanth</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <link rel="icon" type="image/x-icon" href="https://django-vishnusayanth.koyeb.app/static/assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="https://python.vishnusayanth.com/static/assets/img/favicon.ico" />
 
 
     <!-- Google Fonts -->
@@ -68,11 +68,11 @@
             navigator.geolocation.getCurrentPosition(function (position) {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
-                fetch('https://django-vishnusayanth.koyeb.app/visit/', { method: 'POST', body: JSON.stringify({ latitude, longitude }) })
+                fetch('https://python.vishnusayanth.com/visit/', { method: 'POST', body: JSON.stringify({ latitude, longitude }) })
             });
         }
         else {
-            fetch('https://django-vishnusayanth.koyeb.app/visit/', { method: 'POST' });
+            fetch('https://python.vishnusayanth.com/visit/', { method: 'POST' });
         }
     </script>
     <script>
@@ -105,7 +105,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="/" class="logo d-flex align-items-center">
-                <img src="https://django-vishnusayanth.koyeb.app/static/assets/img/favicon.ico" alt="">
+                <img src="https://python.vishnusayanth.com/static/assets/img/favicon.ico" alt="">
                 <span class="d-none d-lg-block">REACT APP</span>
             </a>
 
@@ -128,7 +128,7 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="https://django-vishnusayanth.koyeb.app/static/assets/img/profile.png" alt="Profile"
+                        <img src="https://python.vishnusayanth.com/static/assets/img/profile.png" alt="Profile"
                             class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">Vishnu Sayanth</span>
                     </a><!-- End Profile Iamge Icon -->

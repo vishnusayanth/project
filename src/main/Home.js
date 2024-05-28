@@ -6,16 +6,16 @@ export default function Home() {
         <div className="container-fluid" data-aos="fade-up">
             <div class="jumbotron jumbotron-fluid bg-light border border-dark">
                 <div class="container">
-                    <br/>
+                    <br />
                     <h2><b>Vishnu Sayanth's React App</b></h2>
                     <p class="lead">Please, also visit another awesome app built on django.</p>
                     <p class="lead">
-                        <a class="btn btn-primary btn-md" href="https://django-vishnusayanth.koyeb.app" target="_blank
+                        <a class="btn btn-primary btn-md" href="https://python.vishnusayanth.com" target="_blank
                         " role="button" rel="noreferrer">View Django App  <i class="bi bi-box-arrow-up-right"></i></a>
                     </p>
                 </div>
             </div>
-            <br/>
+            <br />
             <div className="row justify-content-center">
                 <div className="container-fluid" style={{ "width": "90%" }}>
                     <nav className="nav nav-pills flex-column flex-sm-row" id="myTab" role="tablist">
@@ -68,7 +68,7 @@ export default function Home() {
                                                 Sample response
                                             </span>
                                         </strong>
-                                        <p><var>https://django-vishnusayanth.koyeb.app/api/countries/</var></p>
+                                        <p><var>https://python.vishnusayanth.com/api/countries/</var></p>
                                         <strong>
                                             Get the list of states in country with id <strong>1</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <span style={{ "cursor": "pointer" }}
@@ -78,7 +78,7 @@ export default function Home() {
                                                 Sample response
                                             </span>
                                         </strong>
-                                        <p><var>https://django-vishnusayanth.koyeb.app/api/states/1</var></p>
+                                        <p><var>https://python.vishnusayanth.com/api/states/1</var></p>
 
                                         <br />
                                         <br />
@@ -162,7 +162,7 @@ export default function Home() {
                                         <div className="shadow-lg p-3 mb-5 bg-light rounded">
                                             <div className="list-group">
                                                 <a href="#" className="list-group-item list-group-item-action">
-                                                    REST API to get data related to geographic locations built by Vishnu Sayanth <a target="_blank" href="https://django-vishnusayanth.koyeb.app/"> <strong>HERE</strong></a>.
+                                                    REST API to get data related to geographic locations built by Vishnu Sayanth <a target="_blank" href="https://python.vishnusayanth.com/"> <strong>HERE</strong></a>.
                                                 </a>
                                                 <a href="#"
                                                     className="list-group-item list-group-item-action list-group-item-secondary">
@@ -208,16 +208,16 @@ export default function Home() {
                                         <br />
                                         <div className="row d-flex align-items-center justify-content-center">
                                             <div className="row container">
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/python.png" className="img-fluid" /></div>
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/django.png" className="img-fluid" /></div>
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/mysql.png" className="img-fluid" /></div>
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/gcloud.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/python.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/django.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/mysql.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/gcloud.png" className="img-fluid" /></div>
                                                 {/* <div className="col-sm-2"></div> */}
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/react.png" className="img-fluid" /></div>
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/js.png" className="img-fluid" />                                            </div>
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/htmlcss.png" className="img-fluid" /></div>
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/bootstrap.png" className="img-fluid" /></div>
-                                                <div className="col-sm"><img src="https://django-vishnusayanth.koyeb.app/static/assets/img/technology/jquery.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/react.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/js.png" className="img-fluid" />                                            </div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/htmlcss.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/bootstrap.png" className="img-fluid" /></div>
+                                                <div className="col-sm"><img src="https://python.vishnusayanth.com/static/assets/img/technology/jquery.png" className="img-fluid" /></div>
 
                                             </div>
                                         </div>
